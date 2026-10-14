@@ -17,7 +17,7 @@
 
 # words = ["python", "generator", "yield", "code", "ai", "developer"]
 
-# cap_words = [word.upper() for word in words if len(word) > 4]
+# cap_words = (word.upper() for word in words if len(word) > 4)
 
 # for word in cap_words:
 #     print(word)
