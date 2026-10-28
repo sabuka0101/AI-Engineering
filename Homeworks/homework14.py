@@ -43,64 +43,64 @@
 
 
 # Task 2
-# class Payment:
-#     def process_payment(self, amount):
-#         print(f"Processing payment of {amount} GEL...")
+class Payment:
+    def process_payment(self, amount):
+        print(f"Processing payment of {amount} GEL...")
 
 
-# class CreditCardPayment(Payment):
-#     def process_payment(self, amount):
-#         print(f"Paid {amount} GEL with credit card")
+class CreditCardPayment(Payment):
+    def process_payment(self, amount):
+        print(f"Paid {amount} GEL with credit card")
 
 
-# class PayPalPayment(Payment):
-#     def process_payment(self, amount):
-#         print(f"Paid {amount} GEL with PayPal")
+class PayPalPayment(Payment):
+    def process_payment(self, amount):
+        print(f"Paid {amount} GEL with PayPal")
 
 
-# payments = [Payment(), CreditCardPayment(), PayPalPayment()]
+payments = [Payment(), CreditCardPayment(), PayPalPayment()]
 
-# for payment in payments:
-#     payment.process_payment(100)
+for payment in payments:
+    payment.process_payment(100)
 
 
 # Task 3
-class SmartDevice:
-    def __init__(self, brand):
-        self.brand = brand
-        self.__is_on = False
+# class SmartDevice:
+#     def __init__(self, brand):
+#         self.brand = brand
+#         self.__is_on = False
 
-    def turn_on(self):
-        self.__is_on = True
-        print(f"{self.brand} device is ON")
+#     def turn_on(self):
+#         self.__is_on = True
+#         print(f"{self.brand} device is ON")
 
-    def turn_off(self):
-        self.__is_on = False
-        print(f"{self.brand} device is OFF")
+#     def turn_off(self):
+#         self.__is_on = False
+#         print(f"{self.brand} device is OFF")
 
-    @property
-    def is_on(self):
-        return self.__is_on
-
-
-class SmartLight(SmartDevice):
-    def __init__(self, brand, brightness):
-        super().__init__(brand)
-        if 0 <= brightness <= 100:
-            self.brightness = brightness
-        else:
-            print("Brightness must be between 0 and 100, setting it to 50")
-
-    def turn_on(self):
-        super().turn_on()
-        print(f"Brightness: {self.brightness}%")
+#     @property
+#     def is_on(self):
+#         return self.__is_on
 
 
-light = SmartLight("Philips", 80)
-print(light.is_on)
+# class SmartLight(SmartDevice):
+#     def __init__(self, brand, brightness):
+#         super().__init__(brand)
+#         if 0 <= brightness <= 100:
+#             self.brightness = brightness
+#         else:
+#             print("Brightness must be between 0 and 100, setting it to 50")
 
-light.turn_on()
-print(light.is_on)
+#     def turn_on(self):
+#         super().turn_on()
+#         print(f"Brightness: {self.brightness}%")
 
-light.turn_off()
-print(light.is_on)
+
+# light = SmartLight("Philips", 80)
+# print(light.is_on)
+
+# light.turn_on()
+# print(light.is_on)
+
+# light.turn_off()
+# print(light.is_on)
